@@ -1,4 +1,4 @@
-(c) 2018 Michael Verastegui
+(c) 2018
 
 The calc program takes in a +/- operator, two 64-bit numbers in the assignment-specified format, and an output base. The main source file does all the input validation and error checking, though it implements a written function from convertToDecimal (which in retrospect should be named convertToTwosComp, but whatever). If I had planned things out better, I probably would have put an int return on the convertToDecimal() function for success or failure, and thereby parsing each number string only once, cutting runtime in half, but it runs in O(1) time for worst case regardless, since the maximum string length that will be accepted is 65 characters. Space complexity is O(1) since all arguments are passed by memory address.
 
